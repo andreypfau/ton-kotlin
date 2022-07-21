@@ -11,6 +11,8 @@ import org.ton.tlb.TlbConstructor
 object AccountUninit : AccountState {
     fun tlbCodec(): TlbConstructor<AccountUninit> = AccountUninitTlbConstructor
 
+    override val status: AccountStatus = AccountStatus.UNINIT
+
     override fun toString(): String = "account_uninit"
 }
 

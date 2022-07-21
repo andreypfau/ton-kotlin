@@ -15,6 +15,8 @@ sealed interface AccountState {
         @JvmStatic
         fun tlbCodec(): TlbCombinator<AccountState> = AccountStateTlbCombinator
     }
+
+    val status: AccountStatus
 }
 
 private object AccountStateTlbCombinator : TlbCombinator<AccountState>() {

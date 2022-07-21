@@ -19,6 +19,8 @@ data class AccountFrozen(
 
     override fun toString(): String = "(account_frozen\nstate_hash:$state_hash)"
 
+    override val status: AccountStatus = AccountStatus.FROZEN
+
     companion object {
         @JvmStatic
         fun tlbCodec(): TlbConstructor<AccountFrozen> = AccountFrozenTlbConstructor

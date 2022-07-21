@@ -17,6 +17,8 @@ data class AccountActive(
 ) : AccountState {
     override fun toString(): String = "account_active($init)"
 
+    override val status: AccountStatus = AccountStatus.ACTIVE
+
     companion object {
         @JvmStatic
         fun tlbCodec(): TlbConstructor<AccountActive> = AccountActiveTlbConstructor
